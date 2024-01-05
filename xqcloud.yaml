@@ -1,0 +1,63 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+  enable: true
+  ipv6: false
+  prefer-h3: true
+  default-nameserver:
+    - 223.5.5.5
+    - 223.6.6.6
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
+  fake-ip-filter:
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    - WORKGROUP
+proxies:
+    - { name: 防失联网址：xq.wtf, type: trojan, server: n1.ml.51vv.top, port: 180, password: password123456, udp: true, skip-cert-verify: true }
+    - { name: '🇭🇰 香港01丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31001, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇭🇰 香港02丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31002, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇭🇰 香港03丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31003, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇭🇰 香港04丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31004, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇭🇰 香港01丨IEPL 2.0x', type: ss, server: zx.44cq.xyz, port: 55301, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇨🇳 台湾01丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 32010, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇨🇳 台湾02丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 32011, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇨🇳 台湾03丨优化1.5x', type: ss, server: zz.44cq.xyz, port: 32009, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇨🇳 台湾01丨IEPL 2.0x', type: ss, server: zx.44cq.xyz, port: 55303, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇸🇬 新加坡01丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31012, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇸🇬 新加坡02丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31011, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇸🇬 新加坡03丨优化 1.5x', type: ss, server: zz.44cq.xyz, port: 31007, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇸🇬 新加坡01丨IEPL 2.0x', type: ss, server: zx.44cq.xyz, port: 55304, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇯🇵 日本01丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 32003, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇯🇵 日本02丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 32004, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇯🇵 日本03丨优化 1.5x', type: ss, server: zz.44cq.xyz, port: 31008, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇯🇵 日本01丨IEPL 2.0x', type: ss, server: zx.44cq.xyz, port: 55302, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇰🇷 韩国01丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 32001, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇰🇷 韩国02丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 32008, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇰🇷 韩国01丨IEPL 2.0x', type: ss, server: zx.44cq.xyz, port: 55305, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇺🇸 美国01丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31005, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇺🇸 美国02丨中转 1.0x', type: ss, server: zz.44cq.xyz, port: 31006, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇺🇸 美国03丨优化 1.5x', type: ss, server: zz.44cq.xyz, port: 31009, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇹🇷 土耳其丨中转 2.0x', type: ss, server: zz.44cq.xyz, port: 32012, cipher: chacha20-ietf-poly1666, password: password123456, udp: true }
+    - { name: '🇸🇬 新加坡03丨直连 1.0x', type: trojan, server: 172.233.91.43, port: 10087, password: password123456, udp: true, skip-cert-verify: true }
+    - { name: '🇸🇬 新加坡04丨直连 1.0x', type: trojan, server: 172.233.91.43, port: 10068, password: password123456, udp: true, skip-cert-verify: true }
+rules:
+    - GEOIP,CN,DIRECT
+    - MATCH,PROXY
